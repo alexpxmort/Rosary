@@ -14,8 +14,45 @@ nav  {
 
     .item:hover{
       cursor: pointer;
+      background-color:darkslateblue;
+
     }
   }
 }
 
 
+
+@media screen and (max-width:800px) {
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul li:nth-child(1){
+    display: none;
+  }
+
+  mat-toolbar {
+    height: 90px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    left: -28px;
+
+  }
+
+  nav ul li:hover{
+    cursor: pointer;
+    background-color:darkslateblue;
+  }
+}
