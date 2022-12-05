@@ -6,12 +6,13 @@ import { MaterialModule } from '../material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TercoComponent } from '../../pages/terco/terco.component';
 
+
 const MODULES= [
   CommonModule,
   BrowserModule,
   AppRoutingModule,
   MaterialModule,
-  BrowserAnimationsModule
+  BrowserAnimationsModule,
 ]
 
 const COMPONENTS = [

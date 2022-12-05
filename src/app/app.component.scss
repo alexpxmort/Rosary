@@ -22,7 +22,8 @@ nav  {
 
 
 
-@media screen and (max-width:800px) {
+@media (max-width:800px) {
+
   ul {
     display: flex;
     flex-direction: column;
