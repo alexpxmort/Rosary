@@ -52,8 +52,16 @@ section{
 
 }
 
+.circle_main{
+  border-radius: 50%;
+  background-color: blueviolet;
+  height: 800px;
+  width: 600px;
+}
+
 .circle,.circle-cross:hover{
   cursor: pointer;
+
 }
 
 .cruz:hover{
@@ -74,31 +82,32 @@ section{
 .circle-cross::after{
   content: "/";
 	display: block;
-  margin-top: 1.9rem;
-  margin-left: 3.7rem;
+  margin-left: 3.9rem;
   font-size: 9em;
+  margin-top: 1.9rem;
   position: relative;
-  top: -88px;
-  left: -2.4px;
+  top: -81.2px;
+  left: -1px;
 }
 
 
 .circle-cross::before{
   content: "\\";
 	display: block;
-  margin-top: 1.9rem;
-  margin-left: 3.7rem;
-  font-size: 9em;
+  margin-top: 1rem;
+  margin-left: 3.9rem;
+  font-size: 9.2em;
   position: relative;
   top: -40px;
-  left: -100px;
+  left: -105px;
 }
 
 
 .line{
   width: 8px;
-  min-height: 120px;
+  min-height: 128px;
   background: black;
+
   display: inline-block;
   position: relative;
   top: -10px;
@@ -108,7 +117,7 @@ section{
 
 .line-right{
   width: 8px;
-  min-height: 130px;
+  min-height: 135px;
   background: black;
   display: inline-block;
   position: relative;
