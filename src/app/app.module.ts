@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CoreModule } from '../modules/core/core.module';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TercoVideoComponent } from './terco-video/terco-video.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TercoVideoComponent,
+    SafePipe
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

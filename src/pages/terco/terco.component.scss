@@ -1,0 +1,167 @@
+section{
+  margin-top:10rem;
+}
+
+.content{
+  color:black;
+  border: 8px solid #ddd;
+  box-shadow: #888;
+  display: block;
+  position: fixed;
+  z-index: 1px;
+  width: 400px;
+  left: 30px;
+
+
+  p{
+    font-size: 1.5em;
+    line-height: 1.5rem;
+  }
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rows{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.terco-item{
+  margin-top: 0;
+}
+
+.circle-cross {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: #800020		;
+}
+
+.circle{
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: #800020	;
+
+}
+
+.circle,.circle-cross:hover{
+  cursor: pointer;
+}
+
+.cruz:hover{
+  cursor: pointer;
+}
+
+.terco-item::after{
+  content: "";
+	display: block;
+	border-left: 100px solid #000;
+	padding-top: .5rem;
+  margin-top: 1.9rem;
+  margin-left: 3.7rem;
+
+}
+
+
+.circle-cross::after{
+  content: "/";
+	display: block;
+  margin-top: 1.9rem;
+  margin-left: 3.7rem;
+  font-size: 9em;
+  position: relative;
+  top: -88px;
+  left: -2.4px;
+}
+
+
+.circle-cross::before{
+  content: "\\";
+	display: block;
+  margin-top: 1.9rem;
+  margin-left: 3.7rem;
+  font-size: 9em;
+  position: relative;
+  top: -40px;
+  left: -100px;
+}
+
+
+.line{
+  width: 8px;
+  min-height: 120px;
+  background: black;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  bottom: -1px;
+  left: -65px;
+}
+
+.line-right{
+  width: 8px;
+  min-height: 130px;
+  background: black;
+  display: inline-block;
+  position: relative;
+  bottom: -50px;
+  right: -65px;
+  bottom:0px;
+}
+
+
+
+.line-right-cross{
+  width: 8px;
+  min-height: 29px;
+  background: black;
+  display: inline-block;
+  position: relative;
+  top: -38px;
+  right: -61px;
+  bottom:0px;
+}
+
+
+
+
+
+.line-cross{
+  width: 8px;
+  min-height: 29px;
+  background: black;
+  display: inline-block;
+  position: relative;
+  top: -38px;
+  left: -61px;
+  bottom:0px;
+}
+
+
+.cruz{
+  background: black;
+  height: 100px;
+  position: relative;
+  width: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.cruz::after{
+  content: "";
+	display: block;
+	border-left: 200px solid #000;
+	padding-top: .5rem;
+  margin-top: 1.9rem;
+  margin-left: 3.7rem;
+  position: relative;
+  left: -150px;
+}

@@ -1,0 +1,23 @@
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top:64px;
+}
+
+
+ul li{
+  padding: 10px 15px;
+  border: 2px solid black;
+}
+
+ul li+li{
+  margin-top: 15px;
+}
+
+
+ul li:hover{
+  cursor: pointer;
+  background-color: #8d8fdc;
+}
