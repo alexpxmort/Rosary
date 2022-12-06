@@ -5,6 +5,7 @@ import { AppRoutingModule } from '../routes/app-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TercoComponent } from '../../pages/terco/terco.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 const MODULES= [
@@ -13,6 +14,7 @@ const MODULES= [
   AppRoutingModule,
   MaterialModule,
   BrowserAnimationsModule,
+  MatGridListModule
 ]
 
 const COMPONENTS = [

@@ -9,11 +9,13 @@ ul {
 
 h2{
   text-align: center;
+  color: white;
 }
 
 ul li{
   padding: 10px 15px;
   border: 2px solid black;
+  color: white;
 }
 
 
@@ -29,7 +31,7 @@ ul li:nth-child(1){
 
 ul li:hover{
   cursor: pointer;
-  background-color: #8d8fdc;
+  background-color: darkgrey;
 }
 
 iframe{
@@ -43,7 +45,7 @@ iframe{
 
 
 section{
-  background-color: #ddd;
+  background-color: lightslategrey;
   width: 100vw;
 }
 
@@ -68,7 +70,7 @@ section{
  h2{
   text-align: left;
   font-size: 11.4px;
-  color: black;
+  color: white;
   font-weight: bold;
   margin-left: 45px;
  }
