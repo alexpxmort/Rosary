@@ -2,8 +2,10 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { IPrayer, TercoService } from '../../app/terco.service';
 
+const HABILITA_VOZ = false;
+
 const checkBrowserCompatibility = () => {
-  return "speechSynthesis" in window
+  return "speechSynthesis" in window && HABILITA_VOZ
 
 }
 
@@ -20,6 +22,7 @@ export class TercoComponent implements OnInit {
   public recommendedVoices: RecommendedVoices;
 
   constructor(private tercoService:TercoService,private render2:Renderer2){
+   if(HABILITA_VOZ){
     this.voices = [];
 		this.rates = [ .25, .5, .75, 1, 1.25, 1.5, 1.75, 2 ];
 		this.selectedVoice = null;
@@ -46,6 +49,7 @@ export class TercoComponent implements OnInit {
 		this.recommendedVoices[ "Veena" ] = true;
 		this.recommendedVoices[ "Victoria" ] = true;
 		this.recommendedVoices[ "Yuri" ] = true;
+   }
   }
 
   public rates!: number[];
@@ -146,7 +150,8 @@ private synthesizeSpeechFromText(
 
 
   ngOnInit(): void {
-    this.voices = speechSynthesis.getVoices();
+    if(HABILITA_VOZ){
+      this.voices = speechSynthesis.getVoices();
 		this.selectedVoice = ( this.voices[ 0 ] || null );
 		this.updateSayCommand();
 
@@ -166,6 +171,7 @@ private synthesizeSpeechFromText(
 				}
 			);
 
+    }
     }
 
   }
@@ -208,14 +214,7 @@ private synthesizeSpeechFromText(
 
     this.text = content || '';
     if(checkBrowserCompatibility()){
-
-
-
       this.speak();
-
-
-
-
 
     }
 
