@@ -23,7 +23,7 @@ export class TercoComponent implements OnInit {
   public recommendedVoices!: RecommendedVoices;
 
   activeLeitura = ()=>{
-    HABILITA_VOZ = true;
+    HABILITA_VOZ = false;
 
     this.buildVoices();
     this.initializeVoice();

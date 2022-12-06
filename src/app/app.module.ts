@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { TercoVideoComponent } from './terco-video/terco-video.component';
 import { SafePipe } from './safe.pipe';
 import { RosarioComponent } from './pages/rosario/rosario.component';
+import { HomiliaDiariaComponent } from './pages/homilia-diaria/homilia-diaria.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TercoVideoComponent,
     SafePipe,
-    RosarioComponent
+    RosarioComponent,
+    HomiliaDiariaComponent
   ],
   imports: [
     CoreModule
