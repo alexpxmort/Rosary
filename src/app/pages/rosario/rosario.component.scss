@@ -32,3 +32,28 @@ iframe{
   width: 700px;
   height: 400px;
 }
+
+
+@media  (max-width:800px){
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(1,400px,1fr);
+    padding-top: 5px;
+    grid-gap: 40px;
+    background-color: lightslategrey;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100%;
+
+  }
+
+  .subtitle,.title{
+    text-align: center;
+  }
+
+  iframe{
+    width: 285px;
+    height: 340px;
+  }
+}
