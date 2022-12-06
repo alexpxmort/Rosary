@@ -52,15 +52,13 @@ iframe{
   .grid{
     display: grid;
     grid-template-columns: repeat(1,400px,1fr);
-    padding-top: 5px;
-    grid-gap: 40px;
+    padding-top: 100px;
     background-color: lightslategrey;
     align-items: center;
     justify-content: center;
     justify-items: center;
     height: 100%;
 
-  }
 
   .subtitle{
     text-align: center;
@@ -68,8 +66,11 @@ iframe{
 
 
   iframe{
-    width: 285px;
-    height: 340px;
+    width: 300px;
+    height: 200px;
     margin-top: 0;
   }
+
+  }
+
 }

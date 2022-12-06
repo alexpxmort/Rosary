@@ -197,3 +197,15 @@ section{
   position: relative;
   left: -150px;
 }
+
+@media (max-width:800px) {
+  .content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .container{
+    margin-top: 100px;
+  }
+}
