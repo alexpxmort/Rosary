@@ -4,6 +4,26 @@ section{
   padding-top: 100px;
 }
 
+.not_read{
+  padding: 1.5rem;
+  border-radius: 15%;
+  color:white;
+  background-color:transparent;
+  font-size:1em;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.icon-display {
+  font-size: 25px;
+}
+
+.not_read:hover{
+  cursor: pointer;
+  background-color: #ddd;
+  color:black;
+}
 .content{
   color:black;
   border: 8px solid #ddd;

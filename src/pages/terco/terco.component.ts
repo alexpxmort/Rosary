@@ -2,12 +2,13 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { IPrayer, TercoService } from '../../app/terco.service';
 
-const HABILITA_VOZ = true;
+let HABILITA_VOZ = false;
 
 const checkBrowserCompatibility = () => {
   return "speechSynthesis" in window && HABILITA_VOZ
 
 }
+
 
 
 interface RecommendedVoices {
@@ -21,8 +22,25 @@ interface RecommendedVoices {
 export class TercoComponent implements OnInit {
   public recommendedVoices!: RecommendedVoices;
 
+  activeLeitura = ()=>{
+    HABILITA_VOZ = true;
+
+    this.buildVoices();
+    this.initializeVoice();
+
+    this.text = document.querySelector('.content p')?.textContent || ''
+
+    setTimeout(() => this.speak(),500)
+  }
+
   constructor(private tercoService:TercoService,private render2:Renderer2){
    if(HABILITA_VOZ){
+    this.buildVoices();
+   }
+  }
+
+
+  buildVoices(){
     this.voices = [];
 		this.selectedVoice = null;
     this.rates = [ .25, .5, .75, 1, 1.25, 1.5, 1.75, 2 ];
@@ -49,13 +67,11 @@ export class TercoComponent implements OnInit {
 		this.recommendedVoices[ "Veena" ] = true;
 		this.recommendedVoices[ "Victoria" ] = true;
 		this.recommendedVoices[ "Yuri" ] = true;
-   }
   }
-
   public rates!: number[];
 	public selectedRate!: number;
 	public selectedVoice!: SpeechSynthesisVoice | null;
-	public text: string = '';
+	public text: string = 'BOM DIA';
 	public voices!: SpeechSynthesisVoice[];
 
   prayer$:Observable<any> =  this.tercoService.getPrayer()
@@ -149,9 +165,8 @@ private synthesizeSpeechFromText(
 	}
 
 
-  ngOnInit(): void {
-    if(HABILITA_VOZ){
-      this.voices = speechSynthesis.getVoices();
+  initializeVoice = ()=>{
+    this.voices = speechSynthesis.getVoices();
 		this.selectedVoice = ( this.voices[ 0 ] || null );
 		this.updateSayCommand();
 
@@ -172,6 +187,10 @@ private synthesizeSpeechFromText(
 			);
 
     }
+  }
+  ngOnInit(): void {
+    if(HABILITA_VOZ){
+      this.initializeVoice()
     }
 
   }

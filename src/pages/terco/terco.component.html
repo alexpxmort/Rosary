@@ -1,5 +1,11 @@
 <section >
   <aside class="content">
+    <button class="not_read" type="button" (click)="activeLeitura()" aria-label="Nao sei Ler">
+      <mat-icon class="icon-display">book</mat-icon>
+      <mat-icon class="icon-display">sentiment_very_dissatisfied</mat-icon>
+    </button>
+
+
     <h2>{{titlePrayer$ | async}}</h2>
     <p>
 
