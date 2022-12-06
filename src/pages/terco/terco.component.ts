@@ -2,7 +2,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { IPrayer, TercoService } from '../../app/terco.service';
 
-const HABILITA_VOZ = false;
+const HABILITA_VOZ = true;
 
 const checkBrowserCompatibility = () => {
   return "speechSynthesis" in window && HABILITA_VOZ
@@ -19,16 +19,16 @@ interface RecommendedVoices {
   styleUrls: ['./terco.component.scss']
 })
 export class TercoComponent implements OnInit {
-  public recommendedVoices: RecommendedVoices;
+  public recommendedVoices!: RecommendedVoices;
 
   constructor(private tercoService:TercoService,private render2:Renderer2){
    if(HABILITA_VOZ){
     this.voices = [];
-		this.rates = [ .25, .5, .75, 1, 1.25, 1.5, 1.75, 2 ];
 		this.selectedVoice = null;
-		this.selectedRate = 1;
+    this.rates = [ .25, .5, .75, 1, 1.25, 1.5, 1.75, 2 ];
+
+		this.selectedRate = 0.8;
 		// Dirty Dancing for the win!
-		this.text = "Me? ... I'm scared of everything. I'm scared of what I saw, of what I did, of who I am. And most of all, I'm scared of walking out of this room and never feeling the rest of my whole life ... the way I feel when I'm with you.";
 
 		// These are "recommended" in so much as that these are the voices that I (Ben)
 		// could understand most clearly.
@@ -165,7 +165,7 @@ private synthesizeSpeechFromText(
 				() => {
 
 					this.voices = speechSynthesis.getVoices();
-					this.selectedVoice = ( this.voices[ 0 ] || null );
+					this.selectedVoice = ( this.voices.find((voice) => voice.lang === 'pt-BR' && voice.name === 'Luciana') || null );
 					this.updateSayCommand();
 
 				}
@@ -215,6 +215,7 @@ private synthesizeSpeechFromText(
     this.text = content || '';
     if(checkBrowserCompatibility()){
       this.speak();
+
 
     }
 
