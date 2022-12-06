@@ -86,7 +86,7 @@ export class TercoComponent implements OnInit {
 
     try{
 
-    await  this.speech.speak({tex:content})
+    await  this.speech.speak({text:content})
 
 
     } catch(err){
