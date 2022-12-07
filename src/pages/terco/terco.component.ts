@@ -21,12 +21,17 @@ interface RecommendedVoices {
 })
 export class TercoComponent implements OnInit {
   public recommendedVoices!: RecommendedVoices;
-  MAX_PRAYER:number = 17
-  countPrayer = 0;
+  MAX_PRAYER:number = 18
+  MAX_MISTERY:number = 5
+  countPrayer:number = 0;
+  arrCounters:number[] = [];
+
+  controlMistery:any;
+  countMistery = 1;
 
   startPray:boolean = false;
 
-  misterio$ = this.tercoService.getMisterioByOrder(1)
+  misterio$ = this.tercoService.getMisterioByOrder(this.countMistery)
 
   activeLeitura = ()=>{
     HABILITA_VOZ = false;
@@ -44,20 +49,40 @@ export class TercoComponent implements OnInit {
     this.startPray = true;
    }else{
 
+
     this.countPrayer = this.countPrayer+1
 
-    console.log(this.countPrayer)
 
-     let circlePray:HTMLDivElement|null =  document.querySelector(`.circle[data-sequence='${this.countPrayer}']`)
+    if(this.countPrayer === this.MAX_PRAYER){
+      this.countMistery = this.countMistery +1
+      this.misterio$ = this.tercoService.getMisterioByOrder(this.countMistery)
+      this.reset()
 
 
-     if(!circlePray){
-      circlePray = document.querySelector(`.circle-cross[data-sequence='${this.countPrayer}']`)
-     }
-     circlePray?.click();
+    }else{
+      this.activePrayer(this.countPrayer);
+
+    }
+
+
+
 
 
    }
+  }
+
+  activePrayer(count:number){
+    let circlePray:HTMLDivElement|null =  document.querySelector(`.circle[data-sequence='${count}']`)
+
+    console.log(circlePray)
+
+    if(!circlePray){
+     circlePray = document.querySelector(`.circle-cross[data-sequence='${count}']`)
+     this.arrCounters.push(count)
+    }else{
+      this.arrCounters.push(count)
+    }
+    circlePray?.click();
   }
 
   constructor(private tercoService:TercoService,private render2:Renderer2){
@@ -227,12 +252,7 @@ private synthesizeSpeechFromText(
   }
 
 
-  async handlePrayer(name:string,event:any){
-
-
-
-    const MAX_PRAYERS:number = 15;
-    const COLOR_SELECTED_PRAYER = 'darkblue';
+  setStyleMisteryItem(name:string,el?:any,color:string = 'darkblue'){
 
     switch(name){
       case 'holy_mary':
@@ -244,6 +264,9 @@ private synthesizeSpeechFromText(
           case 'glory':
             this.titlePrayer$ = this.prayer$.pipe(map(value => `Gloria`))
             break;
+            case 'salve_rainha':
+              this.titlePrayer$ = this.prayer$.pipe(map(value => `Salve Rainha`))
+              break;
             default:
               this.titlePrayer$ = this.prayer$.pipe(map(value => `Credo`))
               break;
@@ -251,25 +274,120 @@ private synthesizeSpeechFromText(
     this.selectedPrayer = this.prayer$.pipe(map(value => value[name]))
 
 
-    if(event.target.getAttribute(`class`)!='cruz'){
-      this.render2.setStyle(event.target,'background-color',COLOR_SELECTED_PRAYER)
+   if(el){
+    if(el.getAttribute(`class`)!='cruz'){
+      this.render2.setStyle(el,'background-color',color)
+    }
+   }
+
+  }
+
+  setStyleByClass(classe:string,propStyle:string,valueStyle:string){
+    Array.from(document.querySelectorAll(`.${classe} `)).forEach((el) => {
+      console.log()
+
+
+      if(!el.getAttribute('class')?.includes('first_mary')){
+          const styles = el.getAttribute('style');
+        if(styles?.includes(propStyle)){
+          let _style = styles.replace(new RegExp(`${propStyle}:`,'gi'),'XX').split('XX')[0];
+          _style = `${_style}${propStyle}:${valueStyle}`;
+          el.setAttribute('style',`${_style}`)
+        }else{
+          el.setAttribute('style',`${propStyle}:${valueStyle}`)
+        }
+      }
+
+    })
+  }
+
+  reset(){
+    if(this.countMistery > 1 ){
+
+      if(this.countMistery -1 === this.MAX_MISTERY){
+        console.log(this.countPrayer)
+        if( this.countPrayer === this.MAX_PRAYER){
+          this.setStyleMisteryItem('salve_rainha')
+          setTimeout(()=>{
+            alert(`TERCO FINALIZADO!! ;)`);
+          },2000)
+        }else{
+          const ourFather:HTMLDivElement|null = document.querySelector('.our_father');
+
+        this.setStyleMisteryItem('our_father',ourFather)
+        }
+      }else{
+        const ourFather:HTMLDivElement|null = document.querySelector('.our_father');
+
+        this.setStyleMisteryItem('our_father',ourFather)
+      }
+
+
     }
 
-    const content  = document.querySelector(`.content p`)?.textContent
+    this.setStyleByClass('circle','background-color','none')
+    this.setStyleByClass('circle-cross','background-color','none')
+
+    this.countPrayer = 0;
+    this.arrCounters = []
+  }
+
+  getCountDivByDivStyle(style:string){
+    return Array.from(document.querySelectorAll('div')).filter((el) => el.getAttribute(`style`)?.includes(style)).length || 0
+
+  }
+
+  async handlePrayer(name:string,event?:any){
 
 
-    this.text = content || '';
-    if(checkBrowserCompatibility()){
-      this.speak();
+
+
+    const COLOR_SELECTED_PRAYER = 'darkblue';
+
+    this.setStyleMisteryItem(name,event.target)
+
+    if(this.countMistery > 1){
+     if(this.countPrayer === 1){
+      this.countPrayer = 6;
+      this.activePrayer(6)
+     }else{
+      if(this.countPrayer === 5){
+        this.activePrayer(7)
+      }else{
+        if(this.countPrayer === 17){
+          console.log(`GLORY`)
+          console.log(this.getCountDivByDivStyle(COLOR_SELECTED_PRAYER))
+          this.activePrayer(5)
+        }else{
+          this.activePrayer(this.countPrayer)
+        }
+      }
+     }
+    }
+
+    console.log(this.countPrayer)
+
+
+
+    if(this.countPrayer === this.MAX_PRAYER){
+      if( this.countMistery ===  this.MAX_MISTERY){
+        this.setStyleMisteryItem('salve_rainha',event.target)
+        this.setStyleByClass('circle','background-color','none')
+        this.setStyleByClass('circle-cross','background-color','none')
+      }
+      console.log(this.countMistery)
+      this.countMistery = this.countMistery + 1
+
+
+
+      this.misterio$ = this.tercoService.getMisterioByOrder(this.countMistery)
+
+      this.reset()
+
 
 
     }
 
-    const selectedPrayersCount = Array.from(document.querySelectorAll('div')).filter((el) => el.getAttribute(`style`)?.includes(COLOR_SELECTED_PRAYER))
-
-    if(selectedPrayersCount.length === MAX_PRAYERS){
-      alert(`terco finalizado`)
-    }
 
   }
 }

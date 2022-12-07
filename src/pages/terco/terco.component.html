@@ -4,7 +4,7 @@
       <mat-icon class="icon-display">play_arrow</mat-icon>
     </button>
   </article>
-  <article *ngIf="misterio$ | async as misterio">
+  <article *ngIf="misterio$ | async as misterio" class="misterio">
     <h2>{{misterio.title}}</h2>
     <p>{{misterio.content}}</p>
   </article>
@@ -61,11 +61,11 @@
     <div class="circle" data-sequence="6"  style="margin-left: 65px;" (click)="handlePrayer('holy_mary',$event)"></div>
    </div>
 
-   <div class="circle-cross"  data-sequence="5"  (click)="handlePrayer('glory',$event)"></div>
-   <div class="circle" data-sequence="4"  (click)="handlePrayer('holy_mary',$event)"></div>
-   <div class="circle" data-sequence="3"  (click)="handlePrayer('holy_mary',$event)"></div>
-   <div class="circle" data-sequence="2"  (click)="handlePrayer('holy_mary',$event)"></div>
-   <div class="circle" data-sequence="1"  (click)="handlePrayer('our_father',$event)"></div>
+   <div class="circle-cross glory"  data-sequence="5"  (click)="handlePrayer('glory',$event)"></div>
+   <div class="circle first_mary" data-sequence="4"  (click)="handlePrayer('holy_mary',$event)"></div>
+   <div class="circle first_mary" data-sequence="3"  (click)="handlePrayer('holy_mary',$event)"></div>
+   <div class="circle first_mary" data-sequence="2"  (click)="handlePrayer('holy_mary',$event)"></div>
+   <div class="circle our_father" data-sequence="1"  (click)="handlePrayer('our_father',$event)"></div>
    <div class="cruz" (click)="handlePrayer('credo',$event)" ></div>
 
   </div>

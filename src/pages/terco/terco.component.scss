@@ -223,7 +223,37 @@ section{
     margin-top: 50px;
   }
 
-  .container{
-    margin-top: 100px;
+  section{
+    padding-top: 200px;
   }
+
+  .container{
+    margin-top: 200px;
+  }
+
+  .misterio{
+    height: auto;
+    width: auto;
+    margin-bottom: 4rem;
+
+  }
+}
+
+
+.misterio{
+height: 200px;
+width: auto;
+margin-bottom: 2rem;
+
+  p{
+    font-size: 1.4em;
+    word-break:break-all;
+    padding: 0.4rem;
+  }
+
+  h2{
+    font-size: 2em;
+    margin-left: 8px;
+  }
+
 }
