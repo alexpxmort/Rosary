@@ -21,6 +21,12 @@ interface RecommendedVoices {
 })
 export class TercoComponent implements OnInit {
   public recommendedVoices!: RecommendedVoices;
+  MAX_PRAYER:number = 17
+  countPrayer = 0;
+
+  startPray:boolean = false;
+
+  misterio$ = this.tercoService.getMisterioByOrder(1)
 
   activeLeitura = ()=>{
     HABILITA_VOZ = false;
@@ -31,6 +37,27 @@ export class TercoComponent implements OnInit {
     this.text = document.querySelector('.content p')?.textContent || ''
 
     setTimeout(() => this.speak(),500)
+  }
+
+  startPrayer(){
+   if(! this.startPray){
+    this.startPray = true;
+   }else{
+
+    this.countPrayer = this.countPrayer+1
+
+    console.log(this.countPrayer)
+
+     let circlePray:HTMLDivElement|null =  document.querySelector(`.circle[data-sequence='${this.countPrayer}']`)
+
+
+     if(!circlePray){
+      circlePray = document.querySelector(`.circle-cross[data-sequence='${this.countPrayer}']`)
+     }
+     circlePray?.click();
+
+
+   }
   }
 
   constructor(private tercoService:TercoService,private render2:Renderer2){

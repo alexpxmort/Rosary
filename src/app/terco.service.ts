@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { filter, from, map, Observable, of } from 'rxjs';
+import { filter, from, map, Observable, of, take } from 'rxjs';
 
 
 export interface IPrayer{
@@ -16,6 +16,54 @@ export interface IPrayer{
 export class TercoService {
 
   constructor() { }
+
+  GLORIOSOS_MISTERIOS = [
+    {
+      title:`Primeiro Mistério Glorioso: Ressurreição de Jesus`,
+      content:`No primeiro dia da semana, muito cedo, dirigiram-se ao sepulcro com os aromas que haviam preparado. Acharam a pedra removida longe da abertura do sepulcro. Entraram, mas não encontraram o corpo do Senhor Jesus. Não sabiam elas o que pensar, quando apareceram em frente delas dois personagens com vestes resplandecentes. Como estivessem amedrontadas e voltassem o rosto para o chão, disseram-lhes eles: "Por que buscais entre os mortos aquele que está vivo? Não está aqui, mas ressuscitou"» (Lc 24, 1-6). `
+    }
+  ]
+
+  getDayMisterios(){
+    if(this.isGloriosos()){
+      return of(this.GLORIOSOS_MISTERIOS)
+    }
+
+    return of([])
+  }
+
+  getMisterioByOrder(order:number){
+    return this.getDayMisterios().pipe(take(order)).pipe(map(misterios => misterios[0]));
+  }
+
+
+  DAYS_GOZOSOS = [1,6];
+
+  DAY_DOLOROSOS = [2,5]
+
+  DAY_GLORIOSOS = [3,6]
+
+  DAY_LUMINOSOS = [4];
+
+  date:Date = new Date();
+
+
+  isGozosos(){
+    return this.date.getDay() === this.DAYS_GOZOSOS[0] || this.date.getDay() === this.DAYS_GOZOSOS[1] ;
+  }
+
+  isLuminosos(){
+    return this.date.getDay() === this.DAY_LUMINOSOS[0] ;
+  }
+
+  isGloriosos(){
+    return this.date.getDay() === this.DAY_GLORIOSOS[0] || this.date.getDay() === this.DAY_GLORIOSOS[1] ;
+  }
+
+  isDolorosos(){
+    return this.date.getDay() === this.DAY_DOLOROSOS[0] || this.date.getDay() === this.DAY_DOLOROSOS[1] ;
+  }
+
 
   private prayer:IPrayer =
     {

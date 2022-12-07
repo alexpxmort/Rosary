@@ -15,15 +15,33 @@ section{
   margin: auto;
 }
 
+
+.start{
+  padding: 1.5rem;
+  border-radius: 15%;
+  color:white;
+  background-color:lightgrey;
+  font-size:1em;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
 .icon-display {
   font-size: 25px;
 }
 
-.not_read:hover{
+.start_container{
+  margin-bottom: 20px;
+}
+
+.not_read,.start:hover{
   cursor: pointer;
   background-color: #ddd;
   color:black;
 }
+
+
 .content{
   color:black;
   border: 8px solid #ddd;

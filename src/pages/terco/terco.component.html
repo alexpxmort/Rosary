@@ -1,9 +1,20 @@
 <section >
-  <aside class="content">
+  <article class="start_container">
+    <button class="start"  type="button" (click)="startPrayer()" aria-label="Start">
+      <mat-icon class="icon-display">play_arrow</mat-icon>
+    </button>
+  </article>
+  <article *ngIf="misterio$ | async as misterio">
+    <h2>{{misterio.title}}</h2>
+    <p>{{misterio.content}}</p>
+  </article>
+
+  <aside class="content" *ngIf="startPray">
     <button class="not_read" style="display: none;" type="button" (click)="activeLeitura()" aria-label="Nao sei Ler">
       <mat-icon class="icon-display">book</mat-icon>
       <mat-icon class="icon-display">sentiment_very_dissatisfied</mat-icon>
     </button>
+
 
 
     <h2>{{titlePrayer$ | async}}</h2>
@@ -14,47 +25,47 @@
   </aside>
   <div class="container">
    <div class="rows">
-    <div class="circle terco-item" (click)="handlePrayer('holy_mary',$event)"></div>
-    <div class="circle" style="margin-left: 65px;" (click)="handlePrayer('holy_mary',$event)"></div>
+    <div class="circle terco-item" data-sequence="17" (click)="handlePrayer('holy_mary',$event)"></div>
+    <div class="circle" data-sequence="16" style="margin-left: 65px;" (click)="handlePrayer('holy_mary',$event)"></div>
    </div>
    <div class="lines">
     <div class="line"></div>
     <div class="line-right"></div>
    </div>
    <div class="rows">
-    <div class="circle" (click)="handlePrayer('holy_mary',$event)"></div>
-    <div class="circle" style="margin-left: 65px;"(click)="handlePrayer('holy_mary',$event)"></div>
+    <div class="circle" data-sequence="15"(click)="handlePrayer('holy_mary',$event)"></div>
+    <div class="circle" data-sequence="14" style="margin-left: 65px;"(click)="handlePrayer('holy_mary',$event)"></div>
    </div>
    <div>
-    <div class="line" (click)="handlePrayer('holy_mary',$event)"></div>
-    <div class="line-right" (click)="handlePrayer('holy_mary',$event)"></div>
+    <div class="line" data-sequence="13" (click)="handlePrayer('holy_mary',$event)"></div>
+    <div class="line-right" data-sequence="12" (click)="handlePrayer('holy_mary',$event)"></div>
    </div>
    <div class="rows">
-    <div class="circle" (click)="handlePrayer('holy_mary',$event)"></div>
-    <div class="circle" style="margin-left: 65px;" (click)="handlePrayer('holy_mary',$event)"></div>
-   </div>
-   <div>
-    <div class="line"></div>
-    <div class="line-right"></div>
-   </div>
-   <div class="rows">
-    <div class="circle " (click)="handlePrayer('holy_mary',$event)"></div>
-    <div class="circle" style="margin-left: 65px;" (click)="handlePrayer('holy_mary',$event)"></div>
+    <div class="circle" data-sequence="11" (click)="handlePrayer('holy_mary',$event)"></div>
+    <div class="circle"  data-sequence="10" style="margin-left: 65px;" (click)="handlePrayer('holy_mary',$event)"></div>
    </div>
    <div>
     <div class="line"></div>
     <div class="line-right"></div>
    </div>
    <div class="rows">
-    <div class="circle " (click)="handlePrayer('holy_mary',$event)"></div>
-    <div class="circle" style="margin-left: 65px;" (click)="handlePrayer('holy_mary',$event)"></div>
+    <div class="circle " data-sequence="9" (click)="handlePrayer('holy_mary',$event)"></div>
+    <div class="circle" data-sequence="8"  style="margin-left: 65px;" (click)="handlePrayer('holy_mary',$event)"></div>
+   </div>
+   <div>
+    <div class="line"></div>
+    <div class="line-right"></div>
+   </div>
+   <div class="rows">
+    <div class="circle " data-sequence="7" (click)="handlePrayer('holy_mary',$event)"></div>
+    <div class="circle" data-sequence="6"  style="margin-left: 65px;" (click)="handlePrayer('holy_mary',$event)"></div>
    </div>
 
-   <div class="circle-cross"  (click)="handlePrayer('glory',$event)"></div>
-   <div class="circle"  (click)="handlePrayer('holy_mary',$event)"></div>
-   <div class="circle"  (click)="handlePrayer('holy_mary',$event)"></div>
-   <div class="circle"  (click)="handlePrayer('holy_mary',$event)"></div>
-   <div class="circle"  (click)="handlePrayer('our_father',$event)"></div>
+   <div class="circle-cross"  data-sequence="5"  (click)="handlePrayer('glory',$event)"></div>
+   <div class="circle" data-sequence="4"  (click)="handlePrayer('holy_mary',$event)"></div>
+   <div class="circle" data-sequence="3"  (click)="handlePrayer('holy_mary',$event)"></div>
+   <div class="circle" data-sequence="2"  (click)="handlePrayer('holy_mary',$event)"></div>
+   <div class="circle" data-sequence="1"  (click)="handlePrayer('our_father',$event)"></div>
    <div class="cruz" (click)="handlePrayer('credo',$event)" ></div>
 
   </div>

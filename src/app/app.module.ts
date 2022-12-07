@@ -6,6 +6,7 @@ import { TercoVideoComponent } from './terco-video/terco-video.component';
 import { SafePipe } from './safe.pipe';
 import { RosarioComponent } from './pages/rosario/rosario.component';
 import { HomiliaDiariaComponent } from './pages/homilia-diaria/homilia-diaria.component';
+import { SaoJoseComponent } from './sao-jose/sao-jose.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HomiliaDiariaComponent } from './pages/homilia-diaria/homilia-diaria.co
     TercoVideoComponent,
     SafePipe,
     RosarioComponent,
-    HomiliaDiariaComponent
+    HomiliaDiariaComponent,
+    SaoJoseComponent
   ],
   imports: [
     CoreModule
