@@ -25,6 +25,7 @@ export class TercoComponent implements OnInit {
   MAX_MISTERY:number = 5
   countPrayer:number = 0;
   arrCounters:number[] = [];
+  finished:boolean = false;
 
   controlMistery:any;
   countMistery = 1;
@@ -308,6 +309,7 @@ private synthesizeSpeechFromText(
         console.log(this.countPrayer)
         if( this.countPrayer === this.MAX_PRAYER){
           this.setStyleMisteryItem('salve_rainha')
+          this.finished = true;
           setTimeout(()=>{
             alert(`TERCO FINALIZADO!! ;)`);
           },2000)

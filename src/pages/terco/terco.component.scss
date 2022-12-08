@@ -45,13 +45,9 @@ section{
 .content{
   color:black;
   border: 8px solid #ddd;
-  box-shadow: #888;
-  display: block;
-  position: fixed;
-  z-index: 1px;
   width: 400px;
-  left: 30px;
   color: white;
+  margin-bottom: 40px;
 
 
   p{
@@ -59,7 +55,23 @@ section{
     line-height: 1.5rem;
   }
 }
+
 .container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: -2rem;
+
+  .content{
+    display: block;
+    background-color: gray;
+    position: relative;
+    top:-380px;
+  }
+}
+
+.terco{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,19 +229,26 @@ section{
 }
 
 @media (max-width:800px) {
-  .content{
+  .container{
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    .content{
+      margin: 0;
+      top:5px;
+      margin-bottom: 60px;
+    }
+
+
   }
 
   section{
     padding-top: 200px;
   }
 
-  .container{
-    margin-top: 200px;
-  }
 
   .misterio{
     height: auto;
@@ -257,3 +276,5 @@ margin-bottom: 2rem;
   }
 
 }
+
+

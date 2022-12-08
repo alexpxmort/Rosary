@@ -41,9 +41,98 @@ export class TercoService {
     }
   ]
 
+  LUMINOSOS_MISTERIOS = [
+    {
+      title:`Primeiro Mistério Luminoso: Batismo de Jesus`,
+      content:``
+    },
+    {
+      title:'Segundo Mistério Luminoso: Jesus nas Bodas de Cana',
+      content:``
+    },
+    {
+      title:'Terceiro Mistério Luminoso: Anúncio do Reino e o convite à conversão',
+      content:``
+    },
+    {
+      title:'Quarto Mistério Luminoso: Transfiguração de Cristo',
+      content:``
+    },
+    {
+      title:'Quinto Mistério Luminoso: Instituição da Eucaristia',
+      content:``
+    }
+  ]
+
+
+  GOZOSOS_MISTERIOS = [
+    {
+      title:`Primeiro Mistério Gozoso: Anunciação a Maria`,
+      content:`«No sexto mês, o anjo Gabriel foi enviado por Deus a uma cidade da Galiléia, chamada Nazaré,  a uma virgem desposada com um homem que se chamava José, da casa de Davi e o nome da virgem era Maria» (Lc 1, 26-27).`
+    },
+    {
+      title:'Segundo Mistério Gozoso: Visitação de Nossa Senhora a sua prima Isabel',
+      content:`«Naqueles dias, Maria se levantou e foi às pressas às montanhas, a uma cidade de Judá. Entrou em casa de Zacarias e saudou Isabel. Ora, apenas Isabel ouviu a saudação de Maria, a criança estremeceu no seu seio; e Isabel ficou cheia do Espírito Santo. E exclamou em alta voz: "Bendita és tu entre as mulheres e bendito é o fruto do teu ventre"» (Lc 1, 39-42).`
+    },
+    {
+      title:'Terceiro Mistério Gozoso: Nascimento de Jesus',
+      content:`«Naqueles tempos apareceu um decreto de César Augusto, ordenando o recenseamento de toda a terra. Este recenseamento foi feito antes do governo de Quirino, na Síria.  Todos iam alistar-se, cada um na sua cidade.
+      Também José subiu da Galiléia, da cidade de Nazaré, à Judéia, à Cidade de Davi, chamada Belém, porque era da casa e família de Davi,  para se alistar com a sua esposa Maria, que estava grávida.  Estando eles ali, completaram-se os dias dela.
+      E deu à luz seu filho primogênito, e, envolvendo-o em faixas, reclinou-o num presépio; porque não havia lugar para eles na hospedaria» (Lc 2,1-7).`
+    },
+
+    {
+      title:'Quarto Mistério Gozoso: Apresentação do Menino Jesus no Templo',
+      content:`«Completados que foram os oito dias para ser circuncidado o menino, foi-lhe posto o nome de Jesus, como lhe tinha chamado o anjo, antes de ser concebido no seio materno. Concluídos os dias da sua purificação segundo a Lei de Moisés, levaram-no a Jerusalém para o apresentar ao Senhor, conforme o que está escrito na lei do Senhor: Todo primogênito do sexo masculino será consagrado ao Senhor; e para oferecerem o sacrifício prescrito pela lei do Senhor, um par de rolas ou dois pombinhos.» (Lc 2, 21-24).`
+    },
+    {
+      title:'Quinto Mistério Gozoso: Perda e encontro do Menino Jesus no Templo',
+      content:`«Seus pais iam todos os anos a Jerusalém para a festa da Páscoa. Tendo ele atingido doze anos, subiram a Jerusalém, segundo o costume da festa. Acabados os dias da festa, quando voltavam, ficou o menino Jesus em Jerusalém, sem que os seus pais o percebessem...
+      Três dias depois o acharam no templo, sentado no meio dos doutores, ouvindo-os e interrogando-os. Todos os que o ouviam estavam maravilhados da sabedoria de suas respostas» (Lc 2, 41-47)`
+    },
+  ]
+
+
+  DOLOROSOS_MISTERIOS = [
+    {
+      title:`Primeiro Mistério Doloroso: Agonia de Jesus no Horto`,
+      content:`«Retirou-se Jesus com eles para um lugar chamado Getsêmani e disse-lhes: "Assentai-vos aqui, enquanto eu vou ali orar". E, tomando consigo Pedro e os dois filhos de Zebedeu, começou a entristecer-se e a angustiar-se. Disse-lhes, então: "Minha alma está triste até a morte. Ficai aqui e vigiai comigo". Adiantou-se um pouco e, prostrando-se com a face por terra, assim rezou: "Meu Pai, se é possível, afasta de mim este cálice! Todavia não se faça o que eu quero, mas sim o que tu queres"» (Mt 26, 36-39).`
+    },
+    {
+      title:'Segundo Mistério Doloroso: Flagelação de Jesus',
+      content:`«Então lhes soltou Barrabás; mas a Jesus mandou açoitar, e o entregou para ser crucificado» (Mt 27,26).`
+    },
+    {
+      title:'Terceiro Mistério Doloroso: Coroação de Espinhos',
+      content:`«Os soldados do governador conduziram Jesus para o pretório e rodearam-no com todo o pelotão. Arrancaram-lhe as vestes e colocaram-lhe um manto escarlate. Depois, trançaram uma coroa de espinhos, meteram-lha na cabeça e puseram-lhe na mão uma vara. Dobrando os joelhos diante dele, diziam com escárnio: "Salve, rei dos judeus!"» (Mt 27, 27-29).`
+    },
+
+    {
+      title:'Quarto Mistério Doloroso: Jesus carregando a cruz no caminho do Calvário',
+      content:`«Passava por ali certo homem de Cirene, chamado Simão, que vinha do campo, pai de Alexandre e de Rufo, e obrigaram-no a que lhe levasse a cruz. Conduziram Jesus ao lugar chamado Gólgota, que quer dizer lugar do crânio» (Mc 15, 21-22).`
+    },
+    {
+      title:'Quinto Mistério Doloroso: Crucifixão e morte de Jesus',
+      content:`«Chegados que foram ao lugar chamado Calvário, ali o crucificaram, como também os ladrões, um à direita e outro à esquerda. E Jesus dizia: "Pai, perdoa-lhes; porque não sabem o que fazem"...
+      Era quase à hora sexta e em toda a terra houve trevas até a hora nona. Escureceu-se o sol e o véu do templo rasgou-se pelo meio. Jesus deu então um grande brado e disse: "Pai, nas tuas mãos entrego o meu espírito". E, dizendo isso, expirou» (Lc  23, 33-46).`
+    },
+  ]
+
   getDayMisterios(){
     if(this.isGloriosos()){
       return of(this.GLORIOSOS_MISTERIOS)
+    }
+
+    if(this.isLuminosos()){
+      return of(this.LUMINOSOS_MISTERIOS)
+    }
+
+    if(this.isDolorosos()){
+      return of(this.DOLOROSOS_MISTERIOS)
+    }
+
+    if(this.isGozosos()){
+      return of(this.GOZOSOS_MISTERIOS)
     }
 
     return of([])
