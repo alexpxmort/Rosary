@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CoroinhaNsSenhoraComponent } from '../../app/coroinha-ns-senhora/coroinha-ns-senhora.component';
 import { HomiliaDiariaComponent } from '../../app/pages/homilia-diaria/homilia-diaria.component';
 import { RosarioComponent } from '../../app/pages/rosario/rosario.component';
 import { SaoJoseComponent } from '../../app/sao-jose/sao-jose.component';
@@ -21,6 +22,9 @@ const routes: Routes = [
   },
   {
     path:'sao-jose',component:SaoJoseComponent,title:'Sao Jose'
+  },
+  {
+    path:'coroinha-ns-senhora',component:CoroinhaNsSenhoraComponent,title:'Coroinha Ns Senhora'
   }
 ];
 
