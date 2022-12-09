@@ -7,6 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TercoComponent } from '../../pages/terco/terco.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
+import { TercoVideoComponent } from '../../app/terco-video/terco-video.component';
+import { SafePipe } from '../../app/safe.pipe';
+import { RosarioComponent } from '../../app/pages/rosario/rosario.component';
+import { SaoJoseComponent } from '../../app/sao-jose/sao-jose.component';
+import { HomiliaDiariaComponent } from '../../app/pages/homilia-diaria/homilia-diaria.component';
 
 
 const MODULES= [
@@ -20,7 +25,12 @@ const MODULES= [
 ]
 
 const COMPONENTS = [
-TercoComponent
+TercoComponent,
+TercoVideoComponent,
+SafePipe,
+RosarioComponent,
+HomiliaDiariaComponent,
+SaoJoseComponent
 ]
 
 

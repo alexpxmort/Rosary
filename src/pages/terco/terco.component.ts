@@ -26,6 +26,9 @@ export class TercoComponent implements OnInit {
   countPrayer:number = 0;
   arrCounters:number[] = [];
   finished:boolean = false;
+  countMary:number = 0;
+  glory:boolean = false;
+  MAX_MARYS = 10;
 
   controlMistery:any;
   countMistery = 1;
@@ -54,28 +57,33 @@ export class TercoComponent implements OnInit {
     this.countPrayer = this.countPrayer+1
 
 
-    if(this.countPrayer === this.MAX_PRAYER){
+    if(this.countPrayer === this.MAX_PRAYER ){
+     if(this.countMistery >1){
+      if(this.countMary ===  this.MAX_MARYS && this.glory){
+        this.countMistery = this.countMistery +1
+        this.misterio$ = this.tercoService.getMisterioByOrder(this.countMistery)
+        this.reset()
+        this.glory = false;
+      }else{
+        this.selectedPrayer = this.prayer$.pipe(map(value => value['glory']))
+        this.glory = true;
+        this.setStyleByClass('glory','background-color','darkblue')
+        this.titlePrayer$ = this.prayer$.pipe(map(value => `Gloria`))
+        this.countPrayer = this.countPrayer - 1;
+      }
+     }else{
       this.countMistery = this.countMistery +1
       this.misterio$ = this.tercoService.getMisterioByOrder(this.countMistery)
       this.reset()
-
-
+     }
     }else{
       this.activePrayer(this.countPrayer);
-
     }
-
-
-
-
-
    }
   }
 
   activePrayer(count:number){
     let circlePray:HTMLDivElement|null =  document.querySelector(`.circle[data-sequence='${count}']`)
-
-    console.log(circlePray)
 
     if(!circlePray){
      circlePray = document.querySelector(`.circle-cross[data-sequence='${count}']`)
@@ -258,6 +266,7 @@ private synthesizeSpeechFromText(
     switch(name){
       case 'holy_mary':
         this.titlePrayer$ = this.prayer$.pipe(map(value => `Ave Maria`))
+        this.countMary = this.countMary + 1;
         break;
         case 'our_father':
           this.titlePrayer$ = this.prayer$.pipe(map(value => `Pai Nosso`))
@@ -310,9 +319,6 @@ private synthesizeSpeechFromText(
         if( this.countPrayer === this.MAX_PRAYER){
           this.setStyleMisteryItem('salve_rainha')
           this.finished = true;
-          setTimeout(()=>{
-            alert(`TERCO FINALIZADO!! ;)`);
-          },2000)
         }else{
           const ourFather:HTMLDivElement|null = document.querySelector('.our_father');
 
@@ -323,6 +329,8 @@ private synthesizeSpeechFromText(
 
         this.setStyleMisteryItem('our_father',ourFather)
       }
+
+      this.countMary = 0;
 
 
     }
@@ -342,8 +350,6 @@ private synthesizeSpeechFromText(
   async handlePrayer(name:string,event?:any){
 
 
-
-
     const COLOR_SELECTED_PRAYER = 'darkblue';
 
     this.setStyleMisteryItem(name,event.target)
@@ -356,10 +362,9 @@ private synthesizeSpeechFromText(
       if(this.countPrayer === 5){
         this.activePrayer(7)
       }else{
-        if(this.countPrayer === 17){
+        if(this.countPrayer === this.MAX_PRAYER){
           console.log(`GLORY`)
           console.log(this.getCountDivByDivStyle(COLOR_SELECTED_PRAYER))
-          this.activePrayer(5)
         }else{
           this.activePrayer(this.countPrayer)
         }
@@ -377,19 +382,10 @@ private synthesizeSpeechFromText(
         this.setStyleByClass('circle','background-color','none')
         this.setStyleByClass('circle-cross','background-color','none')
       }
-      console.log(this.countMistery)
       this.countMistery = this.countMistery + 1
-
-
-
       this.misterio$ = this.tercoService.getMisterioByOrder(this.countMistery)
 
       this.reset()
-
-
-
     }
-
-
   }
 }

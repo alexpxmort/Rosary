@@ -10,8 +10,6 @@ export class RosarioComponent implements OnInit {
   }
 
   ROSARIO_LINK = 'https://www.youtube.com/embed/rI5aj8_S_ak';
-
-
   url:string = this.ROSARIO_LINK
 
   date:Date = new Date();
