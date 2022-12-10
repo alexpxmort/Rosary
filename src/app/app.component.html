@@ -1,38 +1,42 @@
-<mat-toolbar color="primary">
- <nav>
-    <ul>
-        <li>Rosario App</li>
-        <li>
-          <a class="item" [routerLink]="'rosario'">
-            Rosario
-          </a>
-        </li>
-        <li>
-          <a class="item" [routerLink]="'sao-jose'">
-            Sao Jose
-          </a>
-        </li>
-        <li>
-          <a class="item" [routerLink]="'coroinha-ns-senhora'">
-            Coroinha Ns Senhora
-          </a>
-        </li>
-        <li>
-          <a class="item" [routerLink]="'terco'">
-            Terco
-          </a>
-        </li>
-        <li>
-          <a class="item" [routerLink]="'tercovideo'">
-            Terco Em Video
-          </a>
-        </li>
-        <li>
-          <a class="item" [routerLink]="'homilia-diaria'">
-            Homilia Diaria
-          </a>
-        </li>
-    </ul>
- </nav>
-</mat-toolbar>
-<router-outlet></router-outlet>
+<header>
+  <mat-toolbar color="primary">
+    <nav>
+       <ul>
+           <li  aria-label="Rosario App">Rosario App</li>
+           <li>
+             <a class="item" [routerLink]="'rosario'" aria-label="Rosario">
+               Rosario
+             </a>
+           </li>
+           <li>
+             <a class="item" [routerLink]="'sao-jose'" aria-label="Sao Jose">
+               Sao Jose
+             </a>
+           </li>
+           <li>
+             <a class="item" [routerLink]="'coroinha-ns-senhora'" aria-label="Coroinha Ns Senhora">
+               Coroinha Ns Senhora
+             </a>
+           </li>
+           <li>
+             <a class="item" [routerLink]="'terco'" aria-label="Terco">
+               Terco
+             </a>
+           </li>
+           <li>
+             <a class="item" [routerLink]="'tercovideo'" aria-label="Terco em Video">
+               Terco Em Video
+             </a>
+           </li>
+           <li>
+             <a class="item" [routerLink]="'homilia-diaria'" aria-label="Homilia Diaria">
+               Homilia Diaria
+             </a>
+           </li>
+       </ul>
+    </nav>
+   </mat-toolbar>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

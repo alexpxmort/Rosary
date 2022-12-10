@@ -44,11 +44,11 @@
 
 .videos{
   display: grid;
-  place-items: center;
-  align-items: center;
-  justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
+  background-color: red;
+
+
 
   iframe{
     width: 400px;
