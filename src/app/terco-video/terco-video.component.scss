@@ -51,6 +51,10 @@ section{
 
 @media  (max-width:400px) {
 
+  section{
+    padding-top: 100px;
+  }
+
  nav ul{
   display: flex;
   flex-direction: column;

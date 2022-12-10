@@ -148,7 +148,7 @@ export class TercoService {
 
   DAY_DOLOROSOS = [2,5]
 
-  DAY_GLORIOSOS = [3,6]
+  DAY_GLORIOSOS = [3,0]
 
   DAY_LUMINOSOS = [4];
 
