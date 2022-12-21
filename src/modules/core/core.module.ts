@@ -13,6 +13,7 @@ import { RosarioComponent } from '../../app/pages/rosario/rosario.component';
 import { SaoJoseComponent } from '../../app/sao-jose/sao-jose.component';
 import { HomiliaDiariaComponent } from '../../app/pages/homilia-diaria/homilia-diaria.component';
 import { CoroinhaNsSenhoraComponent } from '../../app/coroinha-ns-senhora/coroinha-ns-senhora.component';
+import { MesesTresSaoJoseComponent } from '../../app/meses-tres-sao-jose/meses-tres-sao-jose.component';
 
 
 const MODULES= [
@@ -32,7 +33,8 @@ SafePipe,
 RosarioComponent,
 HomiliaDiariaComponent,
 SaoJoseComponent,
-CoroinhaNsSenhoraComponent
+CoroinhaNsSenhoraComponent,
+MesesTresSaoJoseComponent
 ]
 
 

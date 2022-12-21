@@ -1,0 +1,58 @@
+
+@import '../../globalStyles.scss';
+
+.grid{
+  padding-top: 80px;
+}
+
+@media  (max-width:800px){
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(1,400px,1fr);
+    padding-top: 220px;
+    background-color: lightslategrey;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100%;
+
+    .videos{
+      display: grid;
+      place-items: center;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+
+
+  .subtitle{
+    text-align: center;
+  }
+
+
+  iframe{
+    width: 280px;
+    height: 300px;
+  }
+
+  }
+
+}
+
+
+.videos{
+  display: grid;
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+  iframe{
+    width: 400px;
+    height: 300px;
+  }
+
+
+}
