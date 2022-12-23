@@ -16,6 +16,11 @@
     justify-items: center;
     height: 100%;
 
+    .title{
+      word-break: break-all;
+      line-height:46px;
+    }
+
     .videos{
       display: grid;
       place-items: center;
@@ -34,6 +39,7 @@
   iframe{
     width: 280px;
     height: 300px;
+    margin-left: 55px;
   }
 
   }
