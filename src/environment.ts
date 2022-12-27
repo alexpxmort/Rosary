@@ -1,8 +1,8 @@
 
 export const environment = {
   production: true,
-  LINK_HOMILIA: 'https://www.youtube.com/embed/yD5_d8UOMFY',
-  LINK_3_MESES_SAO_JOSE: 'https://www.youtube.com/embed/tyzBW9PVYAM',
+  LINK_HOMILIA: 'https://www.youtube.com/embed/nfiUuBoOWvA',
+  LINK_3_MESES_SAO_JOSE: 'https://www.youtube.com/embed/xMrBzvTUl94',
   LINK_COROINHA: 'https://www.youtube.com/embed/GwZ7i0ld36U',
   LINKS_SAO_JOSE:[
     'https://www.youtube.com/embed/MvlCL_v0L1I',
