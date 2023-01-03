@@ -14,6 +14,7 @@ import { SaoJoseComponent } from '../../app/sao-jose/sao-jose.component';
 import { HomiliaDiariaComponent } from '../../app/pages/homilia-diaria/homilia-diaria.component';
 import { CoroinhaNsSenhoraComponent } from '../../app/coroinha-ns-senhora/coroinha-ns-senhora.component';
 import { MesesTresSaoJoseComponent } from '../../app/meses-tres-sao-jose/meses-tres-sao-jose.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const MODULES= [
@@ -23,7 +24,8 @@ const MODULES= [
   MaterialModule,
   BrowserAnimationsModule,
   MatGridListModule,
-  MatIconModule
+  MatIconModule,
+  HttpClientModule
 ]
 
 const COMPONENTS = [
@@ -41,6 +43,6 @@ MesesTresSaoJoseComponent
 @NgModule({
   declarations: COMPONENTS,
   imports: MODULES,
-  exports:  MODULES
+  exports:  MODULES,
 })
 export class CoreModule { }

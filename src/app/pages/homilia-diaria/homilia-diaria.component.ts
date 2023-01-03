@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from '../../../environment';
 
 @Component({
@@ -7,8 +9,10 @@ import { environment } from '../../../environment';
   styleUrls: ['./homilia-diaria.component.scss']
 })
 export class HomiliaDiariaComponent implements OnInit {
+
+  constructor(private http:HttpClient){}
   ngOnInit(): void {
-    console.log()
+    this.getVideoHomilia()
   }
   title:string = 'Homilia Diaria'
   URL_HOMILIA:string = environment.LINK_HOMILIA || '';
@@ -16,4 +20,10 @@ export class HomiliaDiariaComponent implements OnInit {
   date:Date = new Date()
 
   url:string = this.URL_HOMILIA
+
+   getVideoHomilia(){
+    this.http.get(`https://youtube-api-x.vercel.app/youtube/homilia`).subscribe((value:any) => {
+      this.url = `${this.url}${value.idVideo}`
+    })
+  }
 }
