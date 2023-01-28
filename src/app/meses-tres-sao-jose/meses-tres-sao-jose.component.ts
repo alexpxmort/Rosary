@@ -276,19 +276,194 @@ export class MesesTresSaoJoseComponent implements OnInit {
       month:2,
       number:45,
       code:'H-WXkLlzKn4'
-    }
+    },
+    {
+      day:2,
+      month:2,
+      number:46,
+      code:'5V48sSWi6Hw'
+    },
+    {
+      day:3,
+      month:2,
+      number:47,
+      code:'POUAtFvaDCI'
+    },
+    {
+      day:4,
+      month:2,
+      number:48,
+      code:'6Mk-aaHENOI'
+    },
+    {
+      day:5,
+      month:2,
+      number:49,
+      code:'7ak31erq0No'
+    },
+    {
+      day:6,
+      month:2,
+      number:50,
+      code:'jklmkRiCYXM'
+    },
+    {
+      day:7,
+      month:2,
+      number:51,
+      code:'0ehSJHTj17E'
+    },
+    {
+      day:8,
+      month:2,
+      number:52,
+      code:'u6pPV3n_WOk'
+    },
+    {
+      day:9,
+      month:2,
+      number:53,
+      code:'iw1LIP2Gv-I'
+    },
+    {
+      day:10,
+      month:2,
+      number:54,
+      code:'iT4PTX8pvXw'
+    },
+    {
+      day:11,
+      month:2,
+      number:55,
+      code:'TS5uh_3uJ0w'
+    },
+    {
+      day:12,
+      month:2,
+      number:56,
+      code:'M8H3LDSB7mA'
+    },
+    {
+      day:13,
+      month:2,
+      number:57,
+      code:'Y0BOrQlZXWM'
+    },
+    {
+      day:14,
+      month:2,
+      number:58,
+      code:'KruhwWL4WEI'
+    },
+    {
+      day:15,
+      month:2,
+      number:59,
+      code:'2v76hbIEACw'
+    },
+    {
+      day:16,
+      month:2,
+      number:60,
+      code:'BKBxX1SkR2A'
+    },
+    {
+      day:17,
+      month:2,
+      number:61,
+      code:'ioQ3FSwNNys'
+    },
+    {
+      day:18,
+      month:2,
+      number:62,
+      code:'azVwJoSarv0'
+    },
+    {
+      day:19,
+      month:2,
+      number:63,
+      code:'0Vslp3qM3zg'
+    },
+    {
+      day:20,
+      month:2,
+      number:64,
+      code:'9PCoijsCKRE'
+    },
+    {
+      day:21,
+      month:2,
+      number:65,
+      code:'3wNH242R6jA'
+    },
+    {
+      day:22,
+      month:2,
+      number:66,
+      code:'j1OMtvPrNWE'
+    },
+    {
+      day:23,
+      month:2,
+      number:67,
+      code:'a1KsCS01QfQ'
+    },
+    {
+      day:24,
+      month:2,
+      number:68,
+      code:'x4qf3vWxX0Y'
+    },
+    {
+      day:25,
+      month:2,
+      number:69,
+      code:'clPS2mV-jOs'
+    },
+    {
+      day:26,
+      month:2,
+      number:70,
+      code:'9ZbhfCXl5QY'
+    },
+    {
+      day:27,
+      month:2,
+      number:71,
+      code:'UPyLRNp-35k'
+    },
+    {
+      day:28,
+      month:2,
+      number:72,
+      code:'yzRaKww17pw'
+    },
+    {
+      day:this.getValue(29,1,this.date.getFullYear()),
+      month:this.getValue(2,3,this.date.getFullYear()),
+      number:73,
+      code:'vK-AGs_-e7c'
+    },
+
   ]
 
 
+  getValue(n1:number,n2:number,year:number):number{
+    console.log(year)
+    return this.bissexto(year) ? n1 : n2
+  }
 
+   bissexto(ano:number = new Date().getFullYear() ): boolean {
+    return ! ((ano % 4) || (!(ano % 100) && (ano % 400)));
+  }
   getCurrentLink(){
     const currentDate = new Date();
 
-
     const day = this.arrDays.find((val) => val.day === currentDate.getDate() && val.month === currentDate.getMonth()+1)
 
-
     if(day){
+      console.log(day)
       this.link = `${this.link}${day.code}`
     }
   }
