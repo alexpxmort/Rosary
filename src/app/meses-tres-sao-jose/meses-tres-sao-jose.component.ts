@@ -450,7 +450,6 @@ export class MesesTresSaoJoseComponent implements OnInit {
 
 
   getValue(n1:number,n2:number,year:number):number{
-    console.log(year)
     return this.bissexto(year) ? n1 : n2
   }
 
@@ -463,7 +462,6 @@ export class MesesTresSaoJoseComponent implements OnInit {
     const day = this.arrDays.find((val) => val.day === currentDate.getDate() && val.month === currentDate.getMonth()+1)
 
     if(day){
-      console.log(day)
       this.link = `${this.link}${day.code}`
     }
   }

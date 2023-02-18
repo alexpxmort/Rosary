@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../routes/app-routing.module';
 import { MaterialModule } from '../material/material.module';
@@ -19,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 const MODULES= [
   CommonModule,
+  FlexLayoutModule,
   BrowserModule,
   AppRoutingModule,
   MaterialModule,

@@ -14,7 +14,7 @@
 
   <div class="container">
     <article class="content" *ngIf="startPray">
-      <h3>Marys: {{countMary}}</h3>
+      <h3>Ave Marias - {{countMary}}</h3>
       <button  class="not_read" style="display: none;" type="button" (click)="activeLeitura()" aria-label="Nao sei Ler">
         <mat-icon class="icon-display">book</mat-icon>
         <mat-icon class="icon-display">sentiment_very_dissatisfied</mat-icon>
@@ -28,7 +28,7 @@
         {{selectedPrayer | async}}
       </p>
     </article>
-    <div class="terco">
+    <div class="terco" fxHide fxShow.gt-sm>
       <div class="rows">
         <div class="circle terco-item" data-sequence="17" (click)="handlePrayer('holy_mary',$event)"></div>
         <div class="circle" data-sequence="16" style="margin-left: 65px;" (click)="handlePrayer('holy_mary',$event)"></div>
