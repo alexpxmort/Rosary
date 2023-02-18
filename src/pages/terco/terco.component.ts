@@ -268,6 +268,15 @@ private synthesizeSpeechFromText(
         this.titlePrayer$ = this.prayer$.pipe(map(value => `Ave Maria`))
         this.countMary = this.countMary + 1;
         break;
+      case 'holy_mary_father':
+        this.titlePrayer$ = this.prayer$.pipe(map(value => `Ave Maria em Honra a Deus Pais`))
+      break;
+      case 'holy_mary_son':
+        this.titlePrayer$ = this.prayer$.pipe(map(value => `Ave Maria em Honra a Deus Filho`))
+      break;
+      case 'holy_mary_holy_ghost':
+        this.titlePrayer$ = this.prayer$.pipe(map(value => `Ave Maria em Honra a Deus Espirito Santo`))
+      break;
         case 'our_father':
           this.titlePrayer$ = this.prayer$.pipe(map(value => `Pai Nosso`))
           break;

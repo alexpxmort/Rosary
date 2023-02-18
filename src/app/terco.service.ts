@@ -6,6 +6,9 @@ export interface IPrayer{
   credo:string;
   glory:string;
   holy_mary:string;
+  holy_mary_son:string;
+  holy_mary_father:string;
+  holy_mary_holy_ghost:string;
   our_father:string;
   salve_rainha:string;
 
@@ -186,6 +189,11 @@ Amém.
       Pai Nosso que estais no Céu, santificado seja o vosso nome; venha a nós o vosso reino; seja feita a tua vontade, assim na terra como no Céu; o pão nosso de cada dia dai-nos hoje; perdoai as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido; e não nos deixeis cair em tentação, mas livrai-nos do mal.
 Amém.`,
 holy_mary:`Ave Maria, cheia de graça, o Senhor é convosco, bendita sois vós entre as mulheres e bendito é o fruto de vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós, pecadores, agora e na hora de nossa morte.
+Amém.`,
+holy_mary_son:`Ave Maria, cheia de graça, o Senhor é convosco, bendita sois vós entre as mulheres e bendito é o fruto de vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós, pecadores, agora e na hora de nossa morte.Amém.`,
+holy_mary_father:`Ave Maria, cheia de graça, o Senhor é convosco, bendita sois vós entre as mulheres e bendito é o fruto de vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós, pecadores, agora e na hora de nossa morte.
+Amém.`,
+holy_mary_holy_ghost:`Ave Maria, cheia de graça, o Senhor é convosco, bendita sois vós entre as mulheres e bendito é o fruto de vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós, pecadores, agora e na hora de nossa morte.
 Amém.`,
 salve_rainha:`Salve Rainha, Mãe de Misericórdia, vida, doçura e esperança nossa, salve! A Vós bradamos, os degredados filhos de Eva. A Vós suspiramos, gemendo e chorando neste vale de lágrimas.
 Eia, pois, Advogada nossa, esses Vossos olhos misericordiosos a nós volvei, e, depois deste desterro, mostrai-nos a Jesus, bendito fruto de Vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
