@@ -239,17 +239,30 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-top: 3rem;
     .content{
-      top: 12rem;
+      top: 20rem;
+      display: flex;
+      flex-direction: column;
+
+      p{
+        padding: 3rem;
+      }
     }
 
 
   }
 
+
+  .subtitle,.title{
+    padding: 3rem;
+    font-size: 2em;
+  }
+
+
   section{
     padding-top: 200px;
   }
+
 
 
   .misterio{

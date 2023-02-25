@@ -6,7 +6,7 @@
     </button>
   </article>
   <article *ngIf="misterio$ | async as misterio" class="misterio">
-    <h2>{{misterio.title}}</h2>
+    <h2 class="title">{{misterio.title}}</h2>
     <p>{{misterio.content}}</p>
     <button  fxShow fxHide.gt-sm [disabled]="finished" class="start"  type="button" (click)="startPrayer()" aria-label="Start">
       <mat-icon *ngIf="!finished" class="icon-display">{{startPray ? 'arrow_forward' : 'play_arrow'}}</mat-icon>
@@ -17,7 +17,7 @@
 
   <div class="container">
     <article class="content" *ngIf="startPray">
-      <h3>Ave Marias - {{countMary}}</h3>
+      <h3 class="subtitle">Ave Marias - {{countMary}}</h3>
       <button  class="not_read" style="display: none;" type="button" (click)="activeLeitura()" aria-label="Nao sei Ler">
         <mat-icon class="icon-display">book</mat-icon>
         <mat-icon class="icon-display">sentiment_very_dissatisfied</mat-icon>
@@ -25,7 +25,7 @@
 
 
 
-      <h2>{{titlePrayer$ | async}}</h2>
+      <h2 class="title">{{titlePrayer$ | async}}</h2>
       <p>
 
         {{selectedPrayer | async}}
