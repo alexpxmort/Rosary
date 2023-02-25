@@ -1,11 +1,14 @@
 <section >
   <article class="start_container" fxHide fxShow.gt-sm>
+    <img src="assets/passaro.png" class="bird"/>
     <button [disabled]="finished" class="start"  type="button" (click)="startPrayer()" aria-label="Start">
       <mat-icon *ngIf="!finished" class="icon-display">{{startPray ? 'arrow_forward' : 'play_arrow'}}</mat-icon>
       <mat-icon *ngIf="finished" class="icon-display">{{'done'}}</mat-icon>
     </button>
   </article>
   <article *ngIf="misterio$ | async as misterio" class="misterio">
+    <img src="assets/passaro.png" class="bird"/>
+
     <h2 class="title">{{misterio.title}}</h2>
     <p>{{misterio.content}}</p>
     <button  fxShow fxHide.gt-sm [disabled]="finished" class="start"  type="button" (click)="startPrayer()" aria-label="Start">

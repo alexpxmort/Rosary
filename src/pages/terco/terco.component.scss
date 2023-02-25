@@ -240,7 +240,7 @@ section{
     align-items: center;
     justify-content: space-between;
     .content{
-      top: 20rem;
+      top: 25rem;
       display: flex;
       flex-direction: column;
 
@@ -270,9 +270,9 @@ section{
     width: auto;
     margin-bottom: 4rem;
     padding-top: 8rem;
-
   }
 }
+
 
 
 .misterio{
@@ -293,4 +293,33 @@ margin-bottom: 2rem;
 
 }
 
+.bird{
+  width: 10rem;
+  height: 10rem;
+  bottom: 3rem;
+  transform: translate(-45vw,0);
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  animation: fly 6s ease-in-out alternate infinite;
 
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(-45vw,0);
+
+  }
+  30% {
+      transform: translate(15vw,0)
+  }
+  55% {
+      transform: translate(27.5vw,0)
+  }
+ 80% {
+      transform: translate(43vw,0)
+  }
+  100% {
+      transform: translate(45vw,0)
+  }
+}
