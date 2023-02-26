@@ -234,13 +234,16 @@ section{
 }
 
 @media (max-width:800px) {
+
+
   .container{
     display: flex;
     flex-direction: column;
+    padding-top: 10rem;
     align-items: center;
     justify-content: space-between;
     .content{
-      top: 25rem;
+      top: 1.8rem;
       display: flex;
       flex-direction: column;
 
@@ -254,7 +257,10 @@ section{
 
 
   .subtitle,.title{
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+
     font-size: 2em;
   }
 
