@@ -9,5 +9,6 @@ export const environment = {
     'https://www.youtube.com/embed/qR5YLl-ojdI',
     'https://www.youtube.com/embed/9FhXggxBabg',
     'https://www.youtube.com/embed/D3JwkquOGQA',
-  ]
+  ],
+  API_YOUTUBE:`https://youtubex.onrender.com/`
 };

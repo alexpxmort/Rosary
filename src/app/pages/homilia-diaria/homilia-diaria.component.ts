@@ -22,7 +22,7 @@ export class HomiliaDiariaComponent implements OnInit {
   url:string = this.URL_HOMILIA
 
    getVideoHomilia(){
-    this.http.get(`https://youtube-api-x.vercel.app/youtube/homilia`).subscribe((value:any) => {
+    this.http.get(`${environment.API_YOUTUBE}youtube/homilia`).subscribe((value:any) => {
       this.url = `${this.url}${value.idVideo}`
     })
   }
