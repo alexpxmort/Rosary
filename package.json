@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+   "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +24,7 @@
     "rxjs": "~7.5.0",
     "speak-tts": "^2.0.8",
     "tslib": "^2.3.0",
+    "xvfb": "^0.4.0",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
