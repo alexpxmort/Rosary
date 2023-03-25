@@ -73,19 +73,23 @@ export class TercoVideoComponent implements OnInit {
     switch(misterio){
       case 'dolorosos':
         this.url =  this.DOLOROSOS_LINK;
+this.titleMisterio = `Dolorosos Dias (Terca e Sexta)`
         break;
         case 'luminosos':
         this.url = this.LUMINOSOS_LINK;
+this.titleMisterio = `Luminosos Dias (Quinta)`
         break;
         case 'gozosos':
         this.url = this.GOZOSOS_LINK;
+this.titleMisterio = `Gozosos Dias (Segunda e Sabado)`
         break;
         case 'gloriosos':
           this.url = this.GLORIOSOS_LINK;
+this.titleMisterio = `Gloriosos Dias (Quarta e Domingo)`
           break;
     }
 
-    this.titleMisterio = ''
+    
   }
 
   actualMisterio(){
