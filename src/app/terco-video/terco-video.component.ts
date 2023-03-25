@@ -95,5 +95,7 @@ this.titleMisterio = `Gloriosos Dias (Quarta e Domingo)`
   actualMisterio(){
     this.setLinkMisterio();
     this.setTitleMisterios()
+this.titleMisterio = 'Misterio de Hoje ' + this.titleMisterio 
+
   }
 }
