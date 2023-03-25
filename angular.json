@@ -81,7 +81,7 @@
           }
         },
         "test": {
-"codeCoverage": true.
+"codeCoverage": true,
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": [
