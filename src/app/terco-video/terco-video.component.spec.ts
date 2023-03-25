@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SafePipe } from '../safe.pipe';
 
 import { TercoVideoComponent } from './terco-video.component';
 
@@ -8,7 +9,7 @@ describe('TercoVideoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TercoVideoComponent ]
+      declarations: [ TercoVideoComponent,SafePipe ]
     })
     .compileComponents();
 

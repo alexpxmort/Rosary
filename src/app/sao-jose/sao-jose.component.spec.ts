@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SafePipe } from '../safe.pipe';
 
 import { SaoJoseComponent } from './sao-jose.component';
 
@@ -8,7 +9,7 @@ describe('SaoJoseComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SaoJoseComponent ]
+      declarations: [ SaoJoseComponent,SafePipe ]
     })
     .compileComponents();
 
