@@ -22,7 +22,9 @@ export class HomiliaDiariaComponent implements OnInit {
   url:string = this.URL_HOMILIA
 
    getVideoHomilia(){
+    console.log(environment.API_YOUTUBE)
     this.http.get(`${environment.API_YOUTUBE}youtube/homilia`).subscribe((value:any) => {
+     console.log(value)
       this.url = `${this.url}${value.idVideo}`
     })
   }

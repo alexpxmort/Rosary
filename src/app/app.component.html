@@ -13,9 +13,14 @@
                Sao Jose
              </a>
            </li>
-           <li>
+           <li *ngIf="isAvailableTresMesesSaoJose">
             <a class="item" [routerLink]="'tres-meses-sao-jose'" aria-label="Tres Meses Sao Jose">
             Tres Meses  Sao Jose
+            </a>
+          </li>
+          <li>
+            <a class="item" [routerLink]="'nove-meses-nossa-senhora'" aria-label="Nove Meses  Nossa Senhora">
+            Nove Meses  Nossa Senhora
             </a>
           </li>
            <li>

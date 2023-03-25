@@ -1,0 +1,17 @@
+<section class="grid">
+  <article>
+    <article>
+      <h4 class="subtitle">{{date | date:'dd/MM/YYYY'}}</h4>
+      <h4 class="subtitle">{{date | date:'HH:mm'}}</h4>
+
+    </article>
+    <h3 class="title">Nove Meses com Maria</h3>
+
+
+    <iframe *ngIf="link" aria-label="Nove Meses com Maria"  [src]="link | safe" allowfullscreen>
+
+    </iframe>
+
+
+  </article>
+</section>

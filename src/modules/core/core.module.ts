@@ -17,6 +17,7 @@ import { HomiliaDiariaComponent } from '../../app/pages/homilia-diaria/homilia-d
 import { CoroinhaNsSenhoraComponent } from '../../app/coroinha-ns-senhora/coroinha-ns-senhora.component';
 import { MesesTresSaoJoseComponent } from '../../app/meses-tres-sao-jose/meses-tres-sao-jose.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NoveMesesNossaSenhoraComponent } from '../../app/pages/nove-meses-nossa-senhora/nove-meses-nossa-senhora.component';
 
 
 const MODULES= [
@@ -39,7 +40,8 @@ RosarioComponent,
 HomiliaDiariaComponent,
 SaoJoseComponent,
 CoroinhaNsSenhoraComponent,
-MesesTresSaoJoseComponent
+MesesTresSaoJoseComponent,
+NoveMesesNossaSenhoraComponent
 ]
 
 
