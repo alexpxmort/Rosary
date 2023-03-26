@@ -26,21 +26,14 @@ export class TercoVideoComponent implements OnInit {
 
   setTitleMisterios(){
 
-    this.titleMisterio = '';
 
     if(this.tercoService.isGozosos()){
       this.titleMisterio = `Gozosos Dias (Segunda e Sabado)`
-    }
-
-    if(this.tercoService.isDolorosos()){
+    }else if(this.tercoService.isDolorosos()){
       this.titleMisterio = `Dolorosos Dias (Terca e Sexta)`
-    }
-
-    if(this.tercoService.isGloriosos()){
+    }else if(this.tercoService.isGloriosos()){
       this.titleMisterio = `Gloriosos Dias (Quarta e Domingo)`
-    }
-
-    if(this.tercoService.isLuminosos()){
+    }else if(this.tercoService.isLuminosos()){
       this.titleMisterio = `Luminosos Dias (Quinta)`
     }
   }
@@ -89,13 +82,13 @@ this.titleMisterio = `Gloriosos Dias (Quarta e Domingo)`
           break;
     }
 
-    
+
   }
 
   actualMisterio(){
     this.setLinkMisterio();
     this.setTitleMisterios()
-this.titleMisterio = 'Misterio de Hoje ' + this.titleMisterio 
+this.titleMisterio = 'Misterio de Hoje ' + this.titleMisterio
 
   }
 }

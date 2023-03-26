@@ -21,6 +21,10 @@ export class TercoService {
 
   constructor() { }
 
+  setDate(date:Date){
+    this.date = date;
+  }
+
   GLORIOSOS_MISTERIOS = [
     {
       title:`Primeiro Mistério Glorioso: Ressurreição de Jesus`,
@@ -124,17 +128,11 @@ export class TercoService {
   getDayMisterios(){
     if(this.isGloriosos()){
       return of(this.GLORIOSOS_MISTERIOS)
-    }
-
-    if(this.isLuminosos()){
+    }else if(this.isLuminosos()){
       return of(this.LUMINOSOS_MISTERIOS)
-    }
-
-    if(this.isDolorosos()){
+    }else if(this.isDolorosos()){
       return of(this.DOLOROSOS_MISTERIOS)
-    }
-
-    if(this.isGozosos()){
+    }else if(this.isGozosos()){
       return of(this.GOZOSOS_MISTERIOS)
     }
 
@@ -155,7 +153,7 @@ export class TercoService {
 
   DAY_LUMINOSOS = [4];
 
-  date:Date = new Date();
+  public date:Date = new Date();
 
 
   isGozosos(){
