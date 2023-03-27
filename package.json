@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test:cov": "ng test -- --configuration=ci --code-coverage",
+    "test":"ng test",
+    "test:cov": "yarn test -- --configuration=ci --code-coverage",
     "test:coveralls": " yarn test:cov && coveralls < coverage/lcov.info"
   },
   "private": true,
