@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { formatDate } from 'src/helpers/date';
 import { environment } from '../../../environment';
 
 @Component({
@@ -11,9 +11,7 @@ import { environment } from '../../../environment';
 export class HomiliaDiariaComponent implements OnInit {
 
   constructor(private http:HttpClient){}
-  ngOnInit(): void {
-    this.getVideoHomilia()
-  }
+
   title:string = 'Homilia Diaria'
   URL_HOMILIA:string = environment.LINK_HOMILIA || '';
 
@@ -21,11 +19,20 @@ export class HomiliaDiariaComponent implements OnInit {
 
   url:string = this.URL_HOMILIA
 
+  ngOnInit(): void {
+    if(localStorage.getItem(`homilia-diaria_${formatDate(new Date(),'yyyy-mm-dd','-')}`)!=null){
+      this.url =  this.url = `${this.url}${localStorage.getItem(`homilia-diaria_${formatDate(new Date(),'yyyy-mm-dd','-') }`)}`
+    }else{
+      this.getVideoHomilia()
+    }
+
+  }
+
    getVideoHomilia(){
     console.log(environment.API_YOUTUBE)
     this.http.get(`${environment.API_YOUTUBE}youtube/homilia`).subscribe((value:any) => {
-     console.log(value)
       this.url = `${this.url}${value.idVideo}`
+      localStorage.setItem(`homilia-diaria_${formatDate(new Date(),'yyyy-mm-dd','-')}`,`${value.idVideo}`)
     })
   }
 }

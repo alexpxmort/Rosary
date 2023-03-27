@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { formatDate } from 'src/helpers/date';
 import { environment } from '../../../environment';
 
 @Component({
@@ -15,9 +16,16 @@ export class NoveMesesNossaSenhoraComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.getCurrentLink().subscribe((value) => {
-      this.link += value?.code;
-    });
+
+    if(localStorage.getItem(`nove-meses-nossa-senhora_${formatDate(new Date(),'yyyy-mm-dd','-')}`)!=null){
+      this.link = `${this.link}${localStorage.getItem(`nove-meses-nossa-senhora_${formatDate(new Date(),'yyyy-mm-dd','-') }`)}`
+    }else{
+      this.getCurrentLink().subscribe((value) => {
+        this.link += value?.code;
+        localStorage.setItem(`nove-meses-nossa-senhora_${formatDate(new Date(),'yyyy-mm-dd','-')}`,`${value?.code}`)
+      });
+    }
+
   }
 
   getCurrentLink(): Observable<any> {
