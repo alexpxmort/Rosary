@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test":"ng test",
     "test:cov": "yarn test -- --configuration=ci --code-coverage",
-    "test:coveralls": " yarn test:cov && coveralls < coverage/lcov.info"
+    "test:coveralls": " yarn test:cov && coveralls < src/coverage/Chrome 112.0.0.0 (Mac OS 10.15.7)/lcov.info"
   },
   "private": true,
   "dependencies": {
