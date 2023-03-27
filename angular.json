@@ -104,7 +104,8 @@
             "ci": {
               "watch": false,
               "progress": false,
-              "browsers": "ChromeHeadlessCI"
+              "browsers": "ChromeHeadlessCI",
+              "codeCoverage": true
             }
           }
         }
