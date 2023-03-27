@@ -23,4 +23,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn
       - run: yarn build
-      - run: yarn test:coveralls
+      - run: yarn test:cov
+      - run: ls
+      - run: cd coverage
+      - run: ls
