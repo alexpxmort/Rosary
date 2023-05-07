@@ -1,0 +1,30 @@
+
+@import '../../../globalStyles.scss';
+
+.grid{
+  padding-top: 80px;
+}
+
+@media  (max-width:800px){
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(1,400px,1fr);
+    padding-top: 200px;
+    background-color: lightslategrey;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100%;
+
+
+
+
+  iframe{
+    width: 300px;
+    height: 200px;
+    margin-top: 0;
+  }
+
+  }
+
+}

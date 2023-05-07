@@ -3,18 +3,16 @@
 
 .grid{
   padding-top: 80px;
+  height: 100vw;
+
 }
 
 @media  (max-width:800px){
   .grid{
     display: grid;
-    grid-template-columns: repeat(1,400px,1fr);
     padding-top: 380px;
     background-color: lightslategrey;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    height: 100%;
+    height: calc(800px * 2);
 
     .videos{
       display: grid;
@@ -47,7 +45,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 
-
+  height: 100vh;
 
   iframe{
     width: 400px;

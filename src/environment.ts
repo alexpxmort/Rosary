@@ -5,11 +5,12 @@ export const environment = {
   LINK_HOMILIA: 'https://www.youtube.com/embed/',
   LINK_3_MESES_SAO_JOSE: 'https://www.youtube.com/embed/',
   LINK_COROINHA: 'https://www.youtube.com/embed/GwZ7i0ld36U',
+  LINK_PRAYER:'https://www.youtube.com/embed/hnJ9om_h9WY',
   LINKS_SAO_JOSE:[
+    'https://www.youtube.com/embed/9FhXggxBabg',
     'https://www.youtube.com/embed/MvlCL_v0L1I',
     'https://www.youtube.com/embed/qR5YLl-ojdI',
-    'https://www.youtube.com/embed/9FhXggxBabg',
-    'https://www.youtube.com/embed/D3JwkquOGQA',
+    'https://www.youtube.com/embed/0I9MaoQ8N04',
   ],
   API_YOUTUBE:`https://youtubex.onrender.com/`
 };

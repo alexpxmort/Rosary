@@ -2,7 +2,11 @@
   <mat-toolbar color="primary">
     <nav>
        <ul>
-           <li  aria-label="Rosario App">Rosario App</li>
+           <li  aria-label="Rosario App"  >
+            <a class="item" [routerLink]="'prayer'" aria-label="Prayer">
+              Rosario App
+            </a>
+           </li>
            <li>
              <a class="item" [routerLink]="'rosario'" aria-label="Rosario">
                Rosario

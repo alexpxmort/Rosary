@@ -8,8 +8,12 @@ import { RosarioComponent } from '../../app/pages/rosario/rosario.component';
 import { SaoJoseComponent } from '../../app/sao-jose/sao-jose.component';
 import { TercoVideoComponent } from '../../app/terco-video/terco-video.component';
 import { TercoComponent } from '../../pages/terco/terco.component';
+import { PrayerComponent } from 'src/app/pages/prayer/prayer.component';
 
 const routes: Routes = [
+  {
+    path:'prayer',component:PrayerComponent,title:'Prayer'
+  },
   {
     path:'terco',component:TercoComponent,title:'Terco'
   },

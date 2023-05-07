@@ -1,0 +1,9 @@
+<section class="grid">
+  <article>
+    <h2 class="title">Pregação</h2>
+    <h4 class="subtitle" >{{date | date:'dd/MM/YYYY'}}</h4>
+    <h4 class="subtitle" >{{date | date:'HH:mm'}}</h4>
+    <iframe aria-label="Pregação" [src]="url | safe" allowfullscreen>
+    </iframe>
+  </article>
+</section>
