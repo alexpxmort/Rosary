@@ -29,7 +29,6 @@ export class HomiliaDiariaComponent implements OnInit {
   }
 
    getVideoHomilia(){
-    console.log(environment.API_YOUTUBE)
     this.http.get(`${environment.API_YOUTUBE}youtube/homilia`).subscribe((value:any) => {
       this.url = `${this.url}${value.idVideo}`
       localStorage.setItem(`homilia-diaria_${formatDate(new Date(),'yyyy-mm-dd','-')}`,`${value.idVideo}`)

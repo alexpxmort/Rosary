@@ -5,6 +5,28 @@
   padding-top: 80px;
 }
 
+button{
+  text-align: center;
+  background-color: gray;
+  padding: 1rem;
+  border-radius: 25%;
+  border:none;
+
+}
+
+button:hover{
+
+    background-color: #888;
+
+}
+
+
+.icon-display {
+  font-size: 25px;
+  color: white;
+}
+
+
 @media  (max-width:800px){
   .grid{
     display: grid;

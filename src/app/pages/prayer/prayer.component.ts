@@ -17,6 +17,11 @@ export class PrayerComponent {
 url:string = environment.LINK_PRAYER
 
 
+chooseNewPrayer(){
+  this.http.get(`${environment.API_YOUTUBE}youtube/findPrayer`).subscribe((value:any) => {
+    this.url = `${environment.LINK_DEFAULT_YOUTUBE}${value.idVideo}`
+  })
+}
 
 
 

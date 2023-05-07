@@ -1,5 +1,8 @@
 <section class="grid">
   <article>
+    <button  type="button" (click)="chooseNewPrayer()"  aria-label="Choose New Prayer">
+      <mat-icon class="icon-display">{{'restart_alt'}}</mat-icon>
+    </button>
     <h2 class="title">Pregação</h2>
     <h4 class="subtitle" >{{date | date:'dd/MM/YYYY'}}</h4>
     <h4 class="subtitle" >{{date | date:'HH:mm'}}</h4>
