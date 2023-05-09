@@ -13,7 +13,7 @@ export class PrayerComponent implements OnInit,OnDestroy {
   constructor(private http:HttpClient){}
 
   date:Date = new Date()
-intervalId;
+intervalId:string | number | any='
 
 url:string = environment.LINK_PRAYER
 
