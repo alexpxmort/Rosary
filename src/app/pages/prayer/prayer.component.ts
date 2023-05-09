@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 import { environment } from 'src/environment';
 
 
@@ -8,11 +8,12 @@ import { environment } from 'src/environment';
   templateUrl: './prayer.component.html',
   styleUrls: ['./prayer.component.scss'],
 })
-export class PrayerComponent {
+export class PrayerComponent implements OnInit,OnDestroy {
 
   constructor(private http:HttpClient){}
 
   date:Date = new Date()
+intervalId;
 
 url:string = environment.LINK_PRAYER
 
@@ -22,7 +23,17 @@ chooseNewPrayer(){
     this.url = `${environment.LINK_DEFAULT_YOUTUBE}${value.idVideo}`
   })
 }
+ngOnInit(){
+// Using Basic Interval
+this.intervalId = setInterval(() => { this.date = new Date(); }, 1000);
+}
 
+
+
+ngOnDestroy() {
+clearInterval(this.intervalId); 
+
+}
 
 
 }
