@@ -5,7 +5,7 @@ export const environment = {
   LINK_HOMILIA: 'https://www.youtube.com/embed/',
   LINK_3_MESES_SAO_JOSE: 'https://www.youtube.com/embed/',
   LINK_COROINHA: 'https://www.youtube.com/embed/GwZ7i0ld36U',
-  LINK_PRAYER:'https://www.youtube.com/embed/hnJ9om_h9WY',
+  LINK_PRAYER:'https://www.youtube.com/embed/93n7fTKj4-Q',
   LINKS_SAO_JOSE:[
     'https://www.youtube.com/embed/9FhXggxBabg',
     'https://www.youtube.com/embed/MvlCL_v0L1I',
