@@ -12,7 +12,7 @@ import { PrayerComponent } from 'src/app/pages/prayer/prayer.component';
 
 const routes: Routes = [
   {
-    path:'prayer',component:PrayerComponent,title:'Prayer'
+    path:'reflexao',component:PrayerComponent,title:'Reflexao'
   },
   {
     path:'terco',component:TercoComponent,title:'Terco'
