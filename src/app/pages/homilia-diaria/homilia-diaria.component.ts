@@ -29,7 +29,7 @@ export class HomiliaDiariaComponent implements OnInit {
   }
 
    getVideoHomilia(){
-    this.http.get(`${environment.API_YOUTUBE}youtube/homilia`).subscribe((value:any) => {
+    this.http.get(`${environment.API_PRAYER}homilia-diaria`).subscribe((value:any) => {
       this.url = `${this.url}${value.idVideo}`
       localStorage.setItem(`homilia-diaria_${formatDate(new Date(),'yyyy-mm-dd','-')}`,`${value.idVideo}`)
     })
