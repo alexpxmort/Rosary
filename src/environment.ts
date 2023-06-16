@@ -12,5 +12,6 @@ export const environment = {
     'https://www.youtube.com/embed/qR5YLl-ojdI',
     'https://www.youtube.com/embed/0I9MaoQ8N04',
   ],
-  API_YOUTUBE:`https://youtubex.onrender.com/`
+  API_YOUTUBE:`https://youtubex.onrender.com/`,
+  API_PRAYER:'https://prayer-api.vercel.app/api/v1/'
 };

@@ -29,6 +29,6 @@ export class NoveMesesNossaSenhoraComponent implements OnInit {
   }
 
   getCurrentLink(): Observable<any> {
-    return this.http.get(`${environment.API_YOUTUBE}nove-meses-nossa-senhora`);
+    return this.http.get(`${environment.API_PRAYER}nove-meses-nossa-senhora`);
   }
 }
