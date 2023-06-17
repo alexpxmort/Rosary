@@ -13,7 +13,7 @@ export class PrayerComponent implements OnInit,OnDestroy {
   constructor(private http:HttpClient){}
 
   date:Date = new Date()
-intervalId:string | number | any=''
+  intervalId:string | number | any=''
 
 url:string = environment.LINK_PRAYER
 
@@ -24,14 +24,14 @@ chooseNewPrayer(){
   })
 }
 ngOnInit(){
-// Using Basic Interval
-this.intervalId = setInterval(() => { this.date = new Date(); }, 1000);
+  // Using Basic Interval
+  this.intervalId = setInterval(() => { this.date = new Date(); }, 1000);
 }
 
 
 
 ngOnDestroy() {
-clearInterval(this.intervalId);
+  clearInterval(this.intervalId);
 
 }
 

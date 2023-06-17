@@ -234,12 +234,10 @@ section{
 }
 
 @media (max-width:800px) {
-
-
   .container{
     display: flex;
     flex-direction: column;
-    padding-top: 10rem;
+    padding-top: 15rem;
     align-items: center;
     justify-content: space-between;
     .content{

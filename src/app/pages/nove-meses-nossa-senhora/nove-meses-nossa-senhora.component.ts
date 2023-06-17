@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { formatDate } from 'src/helpers/date';
 import { environment } from '../../../environment';
@@ -9,11 +9,15 @@ import { environment } from '../../../environment';
   templateUrl: './nove-meses-nossa-senhora.component.html',
   styleUrls: ['./nove-meses-nossa-senhora.component.scss']
 })
-export class NoveMesesNossaSenhoraComponent implements OnInit {
+export class NoveMesesNossaSenhoraComponent implements OnInit,OnDestroy {
   date = new Date();
+  intervalId:string | number | any=''
   link = environment.LINK_DEFAULT_YOUTUBE;
 
   constructor(private http: HttpClient) {}
+  ngOnDestroy(): void {
+    clearInterval(this.intervalId);
+  }
 
   ngOnInit(): void {
 
@@ -25,6 +29,9 @@ export class NoveMesesNossaSenhoraComponent implements OnInit {
         localStorage.setItem(`nove-meses-nossa-senhora_${formatDate(new Date(),'yyyy-mm-dd','-')}`,`${value?.code}`)
       });
     }
+
+        // Using Basic Interval
+  this.intervalId = setInterval(() => { this.date = new Date(); }, 1000);
 
   }
 
