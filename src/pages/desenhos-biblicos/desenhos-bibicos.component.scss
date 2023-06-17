@@ -1,0 +1,59 @@
+
+@import '../../globalStyles.scss';
+
+.grid{
+  padding-top: 80px;
+  height: 100vw;
+
+}
+
+@media  (max-width:800px){
+
+
+  .grid{
+    display: flex;
+    padding-top: 430px;
+    background-color: lightslategrey;
+    height: calc(800px * 2);
+    width: 100%;
+    .videos{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      gap: 20px;
+      padding: 10px;
+    }
+
+
+  .subtitle{
+    text-align: center;
+  }
+
+
+
+  iframe{
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+  }
+
+  }
+
+}
+
+
+.videos{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+  height: 100vh;
+
+  iframe{
+    width: 400px;
+    height: 300px;
+  }
+
+
+}

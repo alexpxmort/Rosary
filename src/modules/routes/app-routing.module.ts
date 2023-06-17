@@ -9,10 +9,14 @@ import { SaoJoseComponent } from '../../app/sao-jose/sao-jose.component';
 import { TercoVideoComponent } from '../../app/terco-video/terco-video.component';
 import { TercoComponent } from '../../pages/terco/terco.component';
 import { PrayerComponent } from 'src/app/pages/prayer/prayer.component';
+import { DesenhosBiblicosComponent } from 'src/pages/desenhos-biblicos/desenhos-biblicos.component';
 
 const routes: Routes = [
   {
     path:'reflexao',component:PrayerComponent,title:'Reflexao'
+  },
+  {
+    path:'desenhos-biblicos',component:DesenhosBiblicosComponent,title:'Desenhos Biblicos'
   },
   {
     path:'terco',component:TercoComponent,title:'Terco'

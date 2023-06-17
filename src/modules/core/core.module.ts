@@ -19,6 +19,7 @@ import { MesesTresSaoJoseComponent } from '../../app/meses-tres-sao-jose/meses-t
 import { HttpClientModule } from '@angular/common/http';
 import { NoveMesesNossaSenhoraComponent } from '../../app/pages/nove-meses-nossa-senhora/nove-meses-nossa-senhora.component';
 import { PrayerComponent } from 'src/app/pages/prayer/prayer.component';
+import { DesenhosBiblicosComponent } from 'src/pages/desenhos-biblicos/desenhos-biblicos.component';
 
 
 const MODULES= [
@@ -39,6 +40,7 @@ TercoVideoComponent,
 SafePipe,
 RosarioComponent,
 HomiliaDiariaComponent,
+DesenhosBiblicosComponent,
 PrayerComponent,
 SaoJoseComponent,
 CoroinhaNsSenhoraComponent,
