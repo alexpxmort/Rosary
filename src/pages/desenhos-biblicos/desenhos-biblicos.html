@@ -5,7 +5,7 @@
       <h4 class="subtitle">{{date | date:'HH:mm'}}</h4>
     </article>
     <h3 class="title">Desenhos Biblicos</h3>
-    <section class="videos" aria-label="Desenhos Biblicos">
+    <section class="videos" aria-label="Desenhos">
       <iframe *ngFor="let link of links" [src]="link.url | safe" allowfullscreen>
       </iframe>
     </section>
