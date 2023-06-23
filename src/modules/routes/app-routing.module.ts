@@ -16,7 +16,7 @@ const routes: Routes = [
     path:'reflexao',component:PrayerComponent,title:'Reflexao'
   },
   {
-    path:'desenhos-biblicos',component:DesenhosBiblicosComponent,title:'Desenhos Biblicos'
+    path:'desenhos',component:DesenhosBiblicosComponent,title:'Desenhos Biblicos'
   },
   {
     path:'terco',component:TercoComponent,title:'Terco'
